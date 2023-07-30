@@ -516,7 +516,12 @@ body {
     }
 }
 
-@media (max-width: 520px) {}
+@media (max-width: 400px) {
+    .content__list {
+        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+        gap: calc(5px + (15 - 13) * ((100vw - 320px) / (400 - 320)));
+    }
+}
 
 .content__item {
     padding: 10px;
