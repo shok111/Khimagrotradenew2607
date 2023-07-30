@@ -37,13 +37,13 @@ body {
 
 }
 
-
-
 .top-navigation__container {
     display: flex;
     justify-content: space-between;
     column-gap: 5px;
     align-items: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .top-navigation__block {}
@@ -84,7 +84,7 @@ body {
     color: #FFF;
     font-size: 14px;
     font-weight: 400;
-    line-height: 130%;
+    line-height: 135%;
     position: relative;
     padding-left: 23px;
 }
