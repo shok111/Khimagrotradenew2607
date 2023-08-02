@@ -232,6 +232,10 @@
         flex: 0 0 40%;
     }
 
+    .info-content__img {
+        max-height: 149px;
+    }
+
     .info-content__title {
         font-size: 20px;
     }
