@@ -33,7 +33,6 @@ body {
 
 .header__top-navigation {
     background-color: rgb(33, 150, 83);
-    min-height: 20px;
 
 }
 
@@ -44,6 +43,7 @@ body {
     align-items: center;
     padding-top: 2px;
     padding-bottom: 2px;
+    min-height: 26px;
 }
 
 .top-navigation__block {}
@@ -58,6 +58,7 @@ body {
 .top-navigation__item {
     display: flex;
     align-items: stretch;
+    position: relative;
 }
 
 .top-navigation__link {
@@ -68,9 +69,27 @@ body {
     line-height: 130%;
     align-self: stretch;
     transition: color 0.3s;
+    position: relative;
 }
 
-.top-navigation__user-account {}
+.top-navigation__link::before,
+.user-account__link::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 0;
+    background-color: #69d815;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s, left 0.3s;
+    border-radius: 2px;
+}
+
+.top-navigation__user-account {
+    display: flex;
+    position: relative;
+    padding-left: 23px;
+}
 
 .user-account {}
 
@@ -86,24 +105,24 @@ body {
     font-weight: 400;
     line-height: 135%;
     position: relative;
-    padding-left: 23px;
+    transition: color 0.3s;
+    position: relative;
 }
 
-.user-account__link::before {
+.top-navigation__user-account::before {
     content: "";
+    display: inline-flex;
     position: absolute;
-    background-color: #C4C4C4;
+    background: url("../img/user.png") 0 0 / 100% no-repeat;
+    /* background-color: #C4C4C4; */
     width: 18px;
     height: 18px;
     top: 0;
     left: 0;
+    transition: transform 0.3s;
 }
 
-.top-navigation__link:hover,
-.user-account__link:hover {
-    color: rgba(235, 233, 128, 0.856);
-    text-decoration: underline;
-}
+
 
 .header__container {}
 
@@ -128,12 +147,14 @@ body {
     width: 79px;
     max-width: 100%;
     overflow: hidden;
+    transition: transform 0.3s;
 }
 
 .middle-navigation__khim-img {
     width: 348px;
     max-width: 100%;
     overflow: hidden;
+    transition: transform 0.3s;
 }
 
 .middle-navigation__logotype {
@@ -161,6 +182,7 @@ body {
     padding-left: 25px;
     max-width: fit-content;
     padding-left: 30px;
+    transition: color 0.3s;
 }
 
 .middle-navigation__phone:first-child:before {
@@ -172,6 +194,7 @@ body {
     height: 25px;
     top: 0;
     left: 0;
+    transition: transform 0.3s;
 }
 
 .middle-navigation__phone:last-child::before {
@@ -183,6 +206,7 @@ body {
     height: 25px;
     top: 0;
     left: 0;
+    transition: transform 0.3s;
 }
 
 .middle-navigation__basket {
@@ -194,6 +218,7 @@ body {
     line-height: inherit;
     flex: 0 0 150px;
     padding-left: 70px;
+    transition: color 0.3s;
 }
 
 .middle-navigation__basket::before {
@@ -205,6 +230,7 @@ body {
     left: 0;
     width: 60px;
     height: 60px;
+    transition: transform 0.3s;
 }
 
 @media (max-width: 870px) {
@@ -240,7 +266,7 @@ body {
     }
 
     .header__container {
-        padding-top: 30px;
+        padding-top: 26px;
     }
 
     .top-navigation__block {
@@ -327,7 +353,7 @@ body {
 
     .top-navigation__block::before {
         content: "";
-        height: 30px;
+        height: 26px;
         width: 100%;
         position: fixed;
         top: 0;
@@ -425,6 +451,7 @@ body {
     font-size: 24px;
     font-weight: 700;
     line-height: 1.8;
+    transition: color 0.3s;
 }
 
 .header__search-header {
@@ -533,10 +560,12 @@ body {
 .content__images {
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .content__img {
     max-width: 100%;
+    transition: transform 0.3s;
 }
 
 .content__title {
@@ -549,6 +578,57 @@ body {
 
 
 
+
+@media (any-hover: hover) {
+
+    .top-navigation__link:hover,
+    .user-account__link:hover {
+        color: #69d815;
+    }
+
+    .top-navigation__link:hover::before,
+    .user-account__link:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+    .top-navigation__user-account:hover::before {
+        transform: scale(1.1);
+    }
+
+    .middle-navigation__logo-img:hover,
+    .middle-navigation__khim-img:hover {
+        transform: scale(1.02);
+    }
+
+    .middle-navigation__basket:hover {
+        color: #7e7e7e;
+    }
+
+    .middle-navigation__basket:hover::before {
+        transform: scale(1.05);
+    }
+
+    .middle-navigation__phone:hover {
+        color: #7e7e7e;
+    }
+
+    .middle-navigation__phone:hover::before {
+        transform: scale(1.1);
+    }
+
+    .bottom-menu__link:hover {
+        color: #428f08;
+    }
+
+    .content__item:hover .content__title {
+        color: #3d6b1e;
+    }
+
+    .content__img:hover {
+        transform: scale(1.05);
+    }
+}
 
 /* -------------------------------------------------- */
 
