@@ -238,6 +238,7 @@
 
     .info-content__block {
         min-height: 100%;
+        flex: 1 1 auto;
     }
 
     .info-content__title {
@@ -245,6 +246,9 @@
     }
 
     .info-content__text {
+        display: flex;
+        align-items: flex-start;
+        align-self: center;
         font-size: 16px;
     }
 
