@@ -197,6 +197,21 @@
         gap: calc(5px + (12 - 5) * ((100vw - 425px) / (550 - 425)));
     }
 
+    .info-content__images {
+        display: flex;
+        justify-content: center;
+        flex: none;
+        max-width: none;
+        min-height: 200px;
+    }
+
+    .content__block {
+        display: flex;
+        flex-direction: column;
+        flex: none;
+        min-height: 52%;
+    }
+
     .info-content__title {
         font-size: 18px;
     }
@@ -236,10 +251,7 @@
         height: 149px;
     }
 
-    .info-content__block {
-        min-height: 100%;
-        flex: 1 1 auto;
-    }
+    .info-content__block {}
 
     .info-content__title {
         font-size: 20px;
