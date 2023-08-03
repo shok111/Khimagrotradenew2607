@@ -233,7 +233,11 @@
     }
 
     .info-content__img {
-        height: 150px;
+        max-height: 149px;
+    }
+
+    .info-content__block {
+        min-height: 100%;
     }
 
     .info-content__title {
@@ -242,7 +246,6 @@
 
     .info-content__text {
         font-size: 16px;
-        flex: 1 1 auto;
     }
 
     .info-content__button {
