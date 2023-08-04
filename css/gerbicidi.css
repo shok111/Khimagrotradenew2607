@@ -200,16 +200,12 @@
     .info-content__images {
         display: flex;
         justify-content: center;
-        flex: none;
-        max-width: none;
-        min-height: 200px;
+        max-height: 200px;
     }
 
     .content__block {
         display: flex;
         flex-direction: column;
-        flex: none;
-        min-height: 52%;
     }
 
     .info-content__title {
@@ -251,9 +247,12 @@
         height: 149px;
     }
 
-    .info-content__block {}
+    .info-content__block {
+        min-height: 50%;
+    }
 
     .info-content__title {
+        padding-top: 0px;
         font-size: 20px;
     }
 
