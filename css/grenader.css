@@ -387,6 +387,33 @@
     transform: translate(-8px, 0);
     width: 110%;
 } */
+@media (max-width: 600px) {
+    .info-content {
+        padding-bottom: 25px;
+    }
+
+    .table__title-info {
+        padding-top: 10px;
+        padding-bottom: 2px;
+        font-size: 24px;
+    }
+
+    .table__title:nth-child(n + 1) {
+        font-size: 24px;
+        min-height: 65px;
+        line-height: 1.1;
+    }
+
+    .table__list::after {
+        top: 65px;
+    }
+
+    .table__content {
+        font-size: 16px;
+        line-height: 1.4;
+        min-height: 100%;
+    }
+}
 
 @media (max-width: 375px) {}
 
