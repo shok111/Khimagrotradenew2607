@@ -2,8 +2,8 @@
 .info-content {
     padding-top: 15px;
     padding-bottom: 15px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); */
     gap: 12px;
 }
 
@@ -242,6 +242,7 @@
 
     .cart-tb {
         display: block;
+        padding-bottom: 5px;
     }
 }
 
@@ -287,9 +288,113 @@
     }
 }
 
+.page__table {}
+
+.table {}
+
+.table__title-info {
+    color: #000;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.table__list {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); */
+    grid-template-columns: 265px 301px 280px 322px;
+    column-gap: 15px;
+    align-items: center;
+    border-bottom: 1px solid #D9D9D9;
+    position: relative;
+    overflow: scroll;
+}
+
+.table__list::after {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 0;
+    /* height: 1px; */
+    width: 1212px;
+    /* background-color: #D9D9D9; */
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.table__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    text-align: center;
+    color: #219653;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+    border-top: 1px solid #D9D9D9;
+    border-right: 1px solid #D9D9D9;
+    border-left: 1px solid #D9D9D9;
+}
+
+.table__title:nth-child(2) {
+    font-size: 32px;
+}
+
+.table__title:nth-child(3),
+.table__title:nth-child(4) {
+    font-size: 28px;
+}
+
+.table__line {
+    height: 1px;
+    background-color: #D9D9D9;
+}
+
+.table__content {
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.4;
+    min-height: 100%;
+    padding-left: 5px;
+
+    width: 108%;
+    /* border-right: 1px solid #D9D9D9; */
+    border-left: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.table__content:nth-child(4n + 1) {
+    justify-content: center;
+    text-align: center;
+    padding-right: 16px;
+}
+
+.table__content:not(:nth-child(4n + 1)) {
+    transform: translate(-8px, 0);
+}
+
+.table__content:nth-child(4n + 4) {
+    border-right: 1px solid #D9D9D9;
+    /* transform: translate(-26px, 0); */
+    width: 102.5%;
+}
+
+/* .table__content:nth-child(4n + 3) {
+    transform: translate(-8px, 0);
+    width: 110%;
+} */
+
 @media (max-width: 375px) {}
 
 @media (max-width: 320px) {}
+
+
+
 
 
 
