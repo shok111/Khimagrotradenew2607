@@ -88,6 +88,7 @@
 
 .block-content__cart {
     /* display: inline-flex; */
+    max-width: fit-content;
 }
 
 .cart {}
